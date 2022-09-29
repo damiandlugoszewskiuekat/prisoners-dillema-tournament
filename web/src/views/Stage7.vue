@@ -11,9 +11,8 @@
       <Button @click="pushToBody('B')">{{ test[i].b }}</Button>
     </div>
     <div class="content" v-else>
-      <p>Twój styl rozwiązywania konfliktów.</p>
-      <p v-if="quality_object">{{quality_object}}</p>
-      <p v-if="quality">{{quality}}</p>
+      <p>Twój styl rozwiązywania konfliktów to:</p>
+      <p v-if="quality"><strong>{{quality}}</strong></p>
       <p>Możesz zaprosić innych znajomych do gry.</p>
       <p><strong>Mam nadzieję, że świetnie się bawiłeś przy tym badaniu!</strong></p>
       <p><strong>Dziękuję jeszcze raz za pomoc!</strong></p>
