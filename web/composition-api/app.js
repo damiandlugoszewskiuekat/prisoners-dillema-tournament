@@ -4,7 +4,7 @@ import { useWS } from '../ws';
 const setMyId = (id) => localStorage.setItem('game-id', id);
 const getMyId = () => localStorage.getItem('game-id');
 
-export const stage = ref(1); // TODO CHANGE BEFORE RELEASE
+export const stage = ref(0);
 export const isLoading = ref(true);
 export const metadata = ref(null);
 export const code = ref(null);

@@ -7,7 +7,7 @@ const STATE_ENUM = {
 
 export const useWS = () => {
   const socket = new WebSocket(import.meta.env.VITE_WSS_URL);
-  // const socket = new WebSocket('ws://localhost:7171/ws');
+  //const socket = new WebSocket('ws://localhost:7171/ws');
 
   const send = (payload) => {
     socket.send(JSON.stringify(payload));
