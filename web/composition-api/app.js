@@ -9,7 +9,7 @@ export const isLoading = ref(true);
 export const metadata = ref(null);
 export const code = ref(null);
 export const players = ref([]);
-export const strategy_timer = ref(60);
+export const strategy_timer = ref(120);
 export const selected_strategy = ref(null);
 export const game = ref(null);
 

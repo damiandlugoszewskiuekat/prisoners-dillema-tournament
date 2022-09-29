@@ -39,52 +39,52 @@ const strategies = [
   {
     name : 'WET',
     label: 'Papuga',
-    description: 'Pierwszy ruch to współpraca. Następny ruch to kopia poprzedniego ruchu przeciwnika.'
+    description: 'W pierwszym ruchu współpracuję. Mój następny ruch to kopia poprzedniego ruchu przeciwnika.'
   },
   {
     name : 'IDIOT',
     label: 'Przyjaciel',
-    description: 'Zawsze współpracuje'
+    description: 'Zawsze współpracuję'
   },
   {
     name : 'CHEAT',
     label: 'Oszust',
-    description: 'Zawsze oszukuje'
+    description: 'Zawsze oszukuję'
   },
   {
     name : 'AVENGER',
     label: 'Mściciel',
-    description: 'Cały czas współpracuje. Jeżel choć raz zostanie oszukany, cały czas oszukuje.'
+    description: 'Cały czas współpracuję. Jeżel choć raz zostanę zdradzony, oszukuję do końca gry.'
   },
   {
     name : 'HOLMES',
     label: 'Sherlock Holmes',
-    description: 'Zaczyna od współpracy, oszustwa, współpracy, współpracy. Jeżeli został oszukany, gra jak Papuga. W przeciwnym wypadku gra jak Oszust.'
+    description: 'Zaczynam od współpracy, oszustwa, współpracy, współpracy. Jeżeli dotychczas zostałem oszukany, gram jak Papuga. W przeciwnym wypadku gram jak Oszust.'
   },
   {
     name : 'WET_FOR_TWO',
     label: 'Wet za dwa wety',
-    description: 'Papuga, z tą różnicą, że zdradza tylko wtedy, kiedy przeciwnik zdradził dwa razy z rzędu. Pierwsza zdrada mogła być pomyłką!'
+    description: 'Papuga, z tą różnicą, że zdradzam tylko wtedy, kiedy przeciwnik zdradził dwa razy z rzędu. Pierwsza zdrada mogła być pomyłką!'
   },
   {
     name : 'LUG',
     label: 'Cham',
-    description: 'Pierwszy ruch to współpraca. Jeżeli jego poprzedni ruch jest taki sam jak ruch przeciwnika - współpracuje. W przeciwnym wypadku oszukuje.'
+    description: 'W pierwszym ruchu współpracuję. Jeżeli mój poprzedni ruch jest taki sam jak ruch przeciwnika - współpracuję. Jeśli się różnią - oszukuję.'
   },
   {
     name : 'BRUTAL',
     label: 'Okrutnik',
-    description: 'Pierwszy ruch to współpraca. Jeżeli przeciwnik kooperuje, zdradza co drugą rundę. Jeżeli przeciwnik zdradzi, oszukuje do samego końca.'
+    description: 'W pierwszym ruchu współpracuję. Jeżeli przeciwnik kooperuje, zdradzam co drugą rundę. Jeżeli przeciwnik zdradzi, oszukuję do samego końca.'
   },
   {
     name : 'TESTER',
     label: 'Tester',
-    description: 'Pierwszy ruch to zdrada. Jeżeli przeciwnik również zdradził, zdradza do samego końca. Jeżeli przeciwnik kooperował, współpracuje do samego końca.'
+    description: 'W pierwszym ruchu zdradzam. Jeżeli przeciwnik również zdradził, zdradzam do samego końca. Jeżeli przeciwnik kooperował, współpracuję z nim do samego końca.'
   },
   {
     name : 'RANDOM',
     label: 'Przypadek',
-    description: 'Losowo współpracuje lub oszukuje - 50/50 szans wyboru.'
+    description: 'Losowo współpracuję lub oszukuję - 50/50 szans wyboru.'
   },
 ]
 
