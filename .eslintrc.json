@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "rules": {
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "object-curly-newline": 0
+  }
+}

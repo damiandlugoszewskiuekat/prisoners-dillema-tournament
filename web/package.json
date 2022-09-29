@@ -1,0 +1,47 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050",
+    "test:unit": "vitest --environment jsdom",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "test": "vitest",
+    "eslint-fix": "yarn eslint --fix ."
+  },
+  "dependencies": {
+    "@rollup/plugin-dynamic-import-vars": "^1.4.2",
+    "@vuepic/vue-datepicker": "^3.3.1",
+    "ajv": "^6.12.4",
+    "axios": "^0.26.1",
+    "click-outside-vue3": "^4.0.1",
+    "dayjs": "^1.11.3",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.12",
+    "vue-select": "^4.0.0-beta.3",
+    "vue3-datepicker": "^0.3.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@testing-library/vue": "^6.4.2",
+    "@vitejs/plugin-vue": "^2.2.2",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-vue": "^8.2.0",
+    "happy-dom": "^2.55.0",
+    "jsdom": "^19.0.0",
+    "node-sass": "^7.0.1",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^10.2.1",
+    "vite": "^2.8.4",
+    "vitest": "^0.5.9"
+  }
+}
