@@ -7,7 +7,6 @@
       </div>
     </template>
     <div class="content">
-
       <div class="score">
         <p class="score__text"><strong>{{player_left_score}}</strong></p>
         -
@@ -19,14 +18,13 @@
         <img class="animation__single" :src="player_right" alt="right person"/>
       </div>
     </div>
-
   </Page>
 </template>
 
 <script setup>
 import Page from "./Page.vue";
 import {ref, onMounted, onUnmounted, nextTick} from 'vue'
-import { stage, game } from "../../composition-api/app";
+import { game } from "../../composition-api/app";
 import Me from "../static/Me.png";
 import Enemy from "../static/Enemy.png";
 import MeCC from "../static/animations/MeCC.gif";

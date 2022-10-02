@@ -1,4 +1,4 @@
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import { useWS } from '../ws';
 
 const setMyId = (id) => localStorage.setItem('game-id', id);

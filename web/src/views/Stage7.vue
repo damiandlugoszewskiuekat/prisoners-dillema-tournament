@@ -22,12 +22,12 @@
 </template>
 
 <script setup>
-import Loader from "../components/global/Loader.vue"
+import Loader from "../components/Loader.vue"
 import Page from "./Page.vue";
-import Button from "../components/global/Button.vue";
+import Button from "../components/Button.vue";
 import {onMounted, ref} from "vue";
 import {callApiGET, callApiPOST} from "../../callApi/callApi";
-import {code, game} from "../../composition-api/app";
+import {code} from "../../composition-api/app";
 
 
 const test = ref(null);

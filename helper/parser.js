@@ -3,7 +3,6 @@ import Crypto from 'crypto';
 import { prepareTeams } from "./team.js";
 import { getRandomInt, startGameRound } from "./game.js";
 import {repo_person} from "../db/repo_person.js";
-// import {query} from "../db/db.js";
 
 const config = {
   room_code_length: 6,
@@ -175,10 +174,10 @@ const setStrategy = ({ id, room, clients, rooms, strategy }) => {
 }
 
 const startRound = ({room, rooms, clients, game_index }) => {
-  const game = rooms.get(room)
+  const game = rooms.get(room);
   const { game_count } = prepareTeams(game.users);
   game.game_count = game_count;
-  game.round_of_game = getRandomInt(6, 12);
+  game.round_of_game = getRandomInt(6, 10);
   clearInterval(timers[room]);
   Object.entries(game.players).forEach(([id, rounds]) => {
     const current_round = rounds[game_index];

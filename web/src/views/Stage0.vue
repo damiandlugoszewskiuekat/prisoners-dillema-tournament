@@ -163,7 +163,7 @@
 <script setup>
 import {onUnmounted, ref, watch} from 'vue';
 import Page from "./Page.vue";
-import Button from "../components/global/Button.vue";
+import Button from "../components/Button.vue";
 import { stage } from "../../composition-api/app";
 import ArrowLeft from "../static/ArrowLeft.svg";
 import ArrowRight from "../static/ArrowRight.svg";

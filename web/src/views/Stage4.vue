@@ -33,7 +33,7 @@
 import Page from "./Page.vue";
 import {onMounted, ref} from 'vue'
 import {setStrategy, strategy_timer, selected_strategy} from "../../composition-api/app";
-import Button from "../components/global/Button.vue";
+import Button from "../components/Button.vue";
 
 const strategies = [
   {
@@ -54,7 +54,7 @@ const strategies = [
   {
     name : 'AVENGER',
     label: 'Mściciel',
-    description: 'Cały czas współpracuję. Jeżel choć raz zostanę zdradzony, oszukuję do końca gry.'
+    description: 'Cały czas współpracuję. Jeżeli choć raz zostanę zdradzony, oszukuję do końca gry.'
   },
   {
     name : 'HOLMES',
@@ -117,8 +117,8 @@ onMounted(() => {
 
 .strategies {
   margin: 16px 0;
-  display: flex;
-  width: 88%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: center;
   gap: 20px;

@@ -9,20 +9,20 @@
   </div>
 </template>
 
-<script setup>
-import {stage} from "../../composition-api/app";
-
-</script>
-
 <style lang="scss" scoped>
 .page-wrapper {
-  width: 72%;
+  width: 72vw;
   height: 80vh;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.title {
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .page {
@@ -35,12 +35,6 @@ import {stage} from "../../composition-api/app";
   padding: 20px;
   background-color: white;
   position: relative;
-}
-
-.title {
-  font-size: 20px;
-  margin-bottom: 32px;
-  font-weight: bold;
 }
 
 </style>

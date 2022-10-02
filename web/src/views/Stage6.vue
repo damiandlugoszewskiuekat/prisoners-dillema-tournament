@@ -27,7 +27,7 @@
 <script setup>
 import {ref} from 'vue';
 import Page from "./Page.vue";
-import Button from "../components/global/Button.vue";
+import Button from "../components/Button.vue";
 import { stage, game } from "../../composition-api/app";
 
 const players = ref(null);

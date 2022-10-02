@@ -6,10 +6,10 @@
     <div class="content">
       <p><strong>Od teraz traktujmy grę poważnie.</strong></p>
       <p>Będziesz grał przeciwko graczom znajdującym się z Tobą w pokoju.</p>
-      <p>Z każdym przeciwnikiem rozegrasz od <strong>6</strong> do <strong>12</strong> rund.</p>
+      <p>Z każdym przeciwnikiem rozegrasz od <strong>6</strong> do <strong>10</strong> rund.</p>
       <p>Nie będziesz wiedział przeciwko komu grasz, jaki jest łączny wynik przeciwnika oraz ile rund jeszcze zostało do końca rozgrywki.</p>
       <p>Twoim zadaniem jest dobranie odpowiedniej według Ciebie <strong>strategii</strong> rozgrywającej iterowany dylemat więźnia przeciwko każdemu graczowi.</p>
-      <p>Opisy strategii znajdziesz po rozpoczęciu rozgrywki przez właściciela pokoju.</p>
+      <p>Strategie już znasz, ale ich opisy znajdziesz również po rozpoczęciu rozgrywki przez właściciela pokoju.</p>
       <div class="players">
         <div class="players__player" v-for="player in players" :key="player.id">
           <img class="players__avatar" :src="Player" alt="avatar" />
@@ -26,13 +26,10 @@
 
 <script setup>
 import Page from "./Page.vue";
-import Button from "../components/global/Button.vue";
-import Loader from "../components/global/Loader.vue";
-import { ref } from 'vue'
+import Button from "../components/Button.vue";
+import Loader from "../components/Loader.vue";
 import { code, players, metadata, startGame } from "../../composition-api/app";
 import Player from "../static/Player.png";
-
-const room = ref('')
 </script>
 
 <style lang="scss" scoped>

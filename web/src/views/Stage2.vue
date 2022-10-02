@@ -17,8 +17,8 @@
 import Page from "./Page.vue";
 import { ref } from 'vue'
 import { createRoom, joinToRoom } from "../../composition-api/app";
-import Button from "../components/global/Button.vue";
-import Input from "../components/global/Input.vue";
+import Button from "../components/Button.vue";
+import Input from "../components/Input.vue";
 
 const room = ref('')
 
