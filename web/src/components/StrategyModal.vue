@@ -8,7 +8,7 @@
         </div>
       </template>
       <div class="content">
-        <p>{{strategy.description}}</p>
+        <p class="content__strategy-description">{{strategy.description}}</p>
         <div class="score">
           <p class="score__text"><strong>{{me_score}}</strong></p>
           -
@@ -278,6 +278,14 @@ onUnmounted(() => {
   justify-content: center;
   align-items: center;
   user-select: none;
+
+  &__strategy-description {
+    width: 90%;
+  }
+
+  p {
+    text-align: center;
+  }
 
   strong {
     font-weight: bold;
