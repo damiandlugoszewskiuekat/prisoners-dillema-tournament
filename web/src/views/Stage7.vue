@@ -13,7 +13,6 @@
       <p>W wielu przypadkach ani zdanie "A", ani zdanie "B" może być nietypowe dla Twojego zachowania, ale proszę wybrać to, którego użycie przez Ciebie byłoby bardziej prawdopodobne.</p>
       <Button @click="pushToBody('A')">{{ test[i].a }}</Button>
       <Button @click="pushToBody('B')">{{ test[i].b }}</Button>
-      <Button @click="makeBody">Test</Button>
     </div>
     <div class="content" v-else>
       <table class="table">
@@ -164,6 +163,7 @@ const pushToBody = async (user_answer) => {
     const res_post = await callApiPOST('/finish-test', body.value);
     if (res_post.success) {
       qualities.value = getQuality(res_post.result.result);
+      qualities_percentile.value = getQualityPercentile(qualities.value);
     }
   }
 }
@@ -404,17 +404,6 @@ const getPoints = (point) => {
   if (point === 2 || point === 3 || point === 4) return 'punkty';
   if (point === 1) return 'punkt';
   return 'punktów';
-}
-
-const makeBody = async () => {
-  answer.value = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A'];
-  body.value = {user_id: '88fc18ed-9bf1-4cb1-b9e1-8a17ef197218', room_id: 'fcf9f6', answer};
-  const res_post = await callApiPOST('/finish-test', body.value);
-  if (res_post.success) {
-    i.value = 30;
-    qualities.value = getQuality(res_post.result.result);
-    qualities_percentile.value = getQualityPercentile(qualities.value);
-  }
 }
 
 onMounted(async () => {
