@@ -44,12 +44,12 @@ const strategies = [
   {
     name : 'IDIOT',
     label: 'Przyjaciel',
-    description: 'Zawsze współpracuję'
+    description: 'Zawsze współpracuję.'
   },
   {
     name : 'CHEAT',
     label: 'Oszust',
-    description: 'Zawsze oszukuję'
+    description: 'Zawsze oszukuję.'
   },
   {
     name : 'AVENGER',

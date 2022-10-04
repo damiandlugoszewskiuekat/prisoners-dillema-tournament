@@ -20,7 +20,7 @@
     </template>
     <div class="content">
       <p>Jest to jeden z najpopularniejszych problemów teorii gier. W oryginalnej postaci brzmi następująco: </p>
-      <p class="dillema">Dwóch podejrzanych zostało zatrzymanych przez policję. Policja, nie mając wystarczających dowodów do postawienia zarzutów, rozdziela więźniów i przedstawia każdemu z nich tę samą ofertę:</p>
+      <p class="dillema">Dwoje podejrzanych zostało zatrzymanych przez policję. Policja, nie mając wystarczających dowodów do postawienia zarzutów, rozdziela więźniów i przedstawia każdemu z nich tę samą ofertę:</p>
       <p class="dillema">Jeśli będzie zeznawać przeciwko drugiemu, a drugi będzie milczeć, to zeznający wyjdzie na wolność, a milczący dostanie dziesięcioletni wyrok.</p>
       <p class="dillema">Jeśli obaj będą milczeć, obaj odsiedzą 6 miesięcy za inne przewinienia.</p>
       <p class="dillema">Jeśli obaj będą zeznawać, obaj dostaną pięcioletnie wyroki.</p>

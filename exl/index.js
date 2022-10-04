@@ -1,7 +1,7 @@
 import ExcelJS from 'exceljs';
 import path from 'node:path';
 import { repo_person } from '../db/repo_person.js';
-import { prepareDataForExcel } from '../db/quiz.js';
+import { prepareDataForExcel } from '../db/test_results.js';
 
 const createExcel = async () => {
   const games = await repo_person.getFinishedGameList();

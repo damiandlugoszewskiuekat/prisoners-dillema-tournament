@@ -1,6 +1,6 @@
 import { test } from '../db/test.js';
 import { repo_person } from '../db/repo_person.js';
-import { calculateResult } from '../db/quiz.js';
+import { calculateResult } from '../db/test_results.js';
 
 const sendError = (res, message) => {
   res.send({ success: false, message });

@@ -59,5 +59,3 @@ export const prepareDataForExcel = async (room) => {
     return acc;
   }, []);
 };
-
-// calculateResult('2b29c0a4-fb8c-4dd9-b47f-92eab97faa1d', '1d0e84')

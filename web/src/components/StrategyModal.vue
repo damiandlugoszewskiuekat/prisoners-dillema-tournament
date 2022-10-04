@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, onUnmounted, ref } from 'vue';
+import { onUnmounted, ref } from 'vue';
 import x from '../static/X.svg';
 import Button from '../components/Button.vue'
 import Page from '../views/Page.vue'

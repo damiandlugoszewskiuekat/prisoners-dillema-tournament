@@ -26,7 +26,7 @@
           </Button>
         </div>
       </div>
-      <Button @click="handleClick">Zrozumiano!</Button>
+      <Button @click="handleClick">Przejdź dalej</Button>
     </div>
   </Page>
   <StrategyModal
@@ -72,12 +72,12 @@ const strategies = [
   {
     name : 'IDIOT',
     label: 'Przyjaciel',
-    description: 'Zawsze współpracuję'
+    description: 'Zawsze współpracuję.'
   },
   {
     name : 'CHEAT',
     label: 'Oszust',
-    description: 'Zawsze oszukuję'
+    description: 'Zawsze oszukuję.'
   },
   {
     name : 'AVENGER',
