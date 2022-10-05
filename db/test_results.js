@@ -279,9 +279,9 @@ export const prepareDataForExcel = async (room) => {
       accumulator[`strategia #${num}`] = round.strategy;
       accumulator[`punkty zdobyte runda #${num}`] = round.points_sum;
       accumulator[`punkty po rundzie #${num}`] = round.points_global_sum;
-      accumulator[`strategia #${num}`] = round.enemy_strategy;
-      accumulator[`punkty zdobyte runda #${num}`] = round.enemy_points_sum;
-      accumulator[`punkty po rundzie #${num}`] = round.enemy_points_global_sum;
+      accumulator[`przeciwnik strategia #${num}`] = round.enemy_strategy;
+      accumulator[`przeciwnik punkty zdobyte runda #${num}`] = round.enemy_points_sum;
+      accumulator[`przeciwnik punkty po rundzie #${num}`] = round.enemy_points_global_sum;
       return accumulator;
     }, {});
 
