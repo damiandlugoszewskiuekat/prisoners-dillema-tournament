@@ -5,12 +5,11 @@
       {{i < 30 ? `Test Thomasa-Kilmanna - pytanie ${i + 1} z ${test.length}` : 'Wyniki testu'}}
     </template>
     <div class="content" v-if="i < 30">
-      {{room_id}}
       <p>Rozważ sytuacje, które mogą pojawić się w Twoim środowisku.</p>
       <p>Sytuacje, w których twoje oczekiwania różnią się od życzeń innych osób.</p>
       <p><strong>Jak zwykle wtedy reagujesz?</strong></p>
       <p>Dla każdej pary przycisków wybierz ten, którego opis jest najbardziej charakterystyczny dla Twojego zachowania.</p>
-      <p>W wielu przypadkach ani zdanie "A", ani zdanie "B" może być nietypowe dla Twojego zachowania, ale proszę wybrać to, którego użycie przez Ciebie byłoby bardziej prawdopodobne.</p>
+      <p>W wielu przypadkach, ani jeden opis ani drugi może nie być typowy dla Twojego zachowania, ale proszę wybrać ten, którego użycie przez Ciebie byłoby bardziej prawdopodobne.</p>
       <Button @click="pushToBody('A')">{{ test[i].a }}</Button>
       <Button @click="pushToBody('B')">{{ test[i].b }}</Button>
     </div>
@@ -48,9 +47,9 @@
       <div class="content content__results" v-if="step === 1">
         <p>Powyższe skalowanie wyniku (górne 25%, środkowe 50%, dolne 25%) odnosi się do badań grupy <strong>336</strong> amerykańskich menedżerów.</p>
         <p v-for="[key,val] in Object.entries(qualities_percentile)">
-          <strong>{{qualities[key]}}</strong> {{ getPoints(val) }} dla cechy <strong>{{key}}</strong> oznacza, że poniżej {{val+1}}%
+          <strong>{{qualities[key]}}</strong> {{ getPoints(val) }} dla cechy <strong>{{key}}</strong> oznacza, że poniżej {{val}}%
           respondentów uzyskało ten wynik lub niższy, natomiast pozostali czyli
-          {{ 100 - val - 1 }}% uzyskało taki sam wynik lub wyższy.
+          {{ 100 - val }}% uzyskało taki sam wynik lub wyższy.
         </p>
       </div>
       <div class="content content__results content__intensities" v-if="step === 2">
@@ -97,6 +96,7 @@
     </template>
     <div class="content">
       <p>Możesz zaprosić innych znajomych do gry.</p>
+      <p>Tak jak wspomniałem na początku, celem mojej pracy będzie zbadanie korelacji wybranych przez Was strategii z waszymi wynikami testu Thomasa Kilmanna.</p>
       <p><strong>Mam nadzieję, że świetnie się bawiłeś przy tym badaniu oraz dowiedziałeś się czegoś ciekawego!</strong></p>
       <p><strong>Dziękuję jeszcze raz za pomoc!</strong></p>
       <p><strong>:D</strong></p>
@@ -131,41 +131,6 @@ const stepAdd = () => {
 
 const stepSubstract = () => {
   step.value -= 1;
-}
-
-const getQuality = (qualities) => {
-  const features = {
-    competition: 'Rywalizacja',
-    cooperation: 'Współpraca',
-    compromise: 'Kompromis',
-    avoidance: 'Unikanie',
-    quadrating: 'Dostosowanie się'
-  }
-  const values = Object.keys(qualities).map(key => {
-    const new_key = features[key] || key;
-    return { [new_key]: qualities[key] };
-  });
-  return Object.assign({}, ...values);
-};
-
-const getQualityPercentile = (qualities) => {
-  const values = Object.keys(qualities).map(key => {
-    return { [key]: getPercentile(key, qualities[key]) };
-  });
-  return Object.assign({}, ...values);
-};
-
-const pushToBody = async (user_answer) => {
-  answer.value.push(user_answer);
-  i.value += 1;
-  if (i.value === 30) {
-    body.value = {user_id, room_id, answer};
-    const res_post = await callApiPOST('/finish-test', body.value);
-    if (res_post.success) {
-      qualities.value = getQuality(res_post.result.result);
-      qualities_percentile.value = getQualityPercentile(qualities.value);
-    }
-  }
 }
 
 const getPercentile = (mode, score) => {
@@ -382,6 +347,26 @@ const getPercentile = (mode, score) => {
       case (12): {
         return 99;
       }
+    }
+  }
+}
+
+const getQualityPercentile = (qualities) => {
+  const values = Object.keys(qualities).map(key => {
+    return { [key]: getPercentile(key, qualities[key]) };
+  });
+  return Object.assign({}, ...values);
+};
+
+const pushToBody = async (user_answer) => {
+  answer.value.push(user_answer);
+  i.value += 1;
+  if (i.value === 30) {
+    body.value = {user_id, room_id, answer};
+    const res_post = await callApiPOST('/finish-test', body.value);
+    if (res_post.success) {
+      qualities.value = res_post.result.result;
+      qualities_percentile.value = getQualityPercentile(qualities.value);
     }
   }
 }

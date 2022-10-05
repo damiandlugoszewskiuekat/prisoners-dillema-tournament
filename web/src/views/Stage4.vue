@@ -22,7 +22,7 @@
       </div>
       <p>Jeżeli nie wybierzesz strategii, automatycznie zostanie ona wybrana losowo.</p>
       <div class="progress-bar" v-if="strategy_timer">
-        <div class="progress-bar__left" :style="`width: calc(${strategy_timer} * 1.67%)`"/>
+        <div class="progress-bar__left" :style="`width: calc(${strategy_timer} * 0.83%)`"/>
         <div class="progress-bar__text">{{strategy_timer}}</div>
       </div>
     </div>

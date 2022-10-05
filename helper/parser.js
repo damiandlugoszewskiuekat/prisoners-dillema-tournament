@@ -81,7 +81,7 @@ function getPlayers({ ws, clients, room, rooms }) {
 }
 
 const strategyTimer = ({ clients, game, room, rooms }) => {
-  let timer = 60;
+  let timer = 120;
 
   timers[room] = setInterval(() => {
     game.users.forEach(ids => {
@@ -102,7 +102,7 @@ const strategyTimer = ({ clients, game, room, rooms }) => {
 
 const roundTimer = ({ clients, game, room, rooms }) => {
   const round = game.round_of_game
-  let timer = (round * 2) + 10;
+  let timer = (round * 2) + 6;
   const interval = setInterval(() => {
     timer -= 1;
 

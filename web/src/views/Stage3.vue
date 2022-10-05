@@ -6,7 +6,7 @@
     <div class="content">
       <p><strong>Od teraz traktujmy grę poważnie.</strong></p>
       <p>Będziesz grał przeciwko graczom znajdującym się z Tobą w pokoju.</p>
-      <p>Z każdym przeciwnikiem rozegrasz od <strong>6</strong> do <strong>10</strong> rund.</p>
+      <p>Z każdym przeciwnikiem rozegrasz od <strong>6</strong> do <strong>10</strong> rund, ich liczba będzie każdorazowo losowana.</p>
       <p>Nie będziesz wiedział przeciwko komu grasz, jaki jest łączny wynik przeciwnika oraz ile rund jeszcze zostało do końca rozgrywki.</p>
       <p>Twoim zadaniem jest dobranie odpowiedniej według Ciebie <strong>strategii</strong> rozgrywającej iterowany dylemat więźnia przeciwko każdemu graczowi.</p>
       <p>Strategie już znasz, ale ich opisy znajdziesz również po rozpoczęciu rozgrywki przez właściciela pokoju.</p>

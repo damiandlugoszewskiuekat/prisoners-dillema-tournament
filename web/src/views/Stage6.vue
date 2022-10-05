@@ -15,7 +15,7 @@
         </div>
       </div>
       <p><strong>Gratulacje!</strong></p>
-      <p>Nie jestem w stanie przewidzieć wyboru Waszych strategii, jednakże warto nadmienić, że osoby, które wybrały <strong>strategie altruistyczne</strong> - grając ze sobą, są w stanie uzyskać <strong>lepsze</strong> wyniki od osób, które wybrały <strong>strategie egoistyczne</strong>.</p>
+      <p>Nie jestem w stanie przewidzieć wyboru Waszych strategii, jednakże warto nadmienić, że osoby, które wybrały <strong>strategie altruistyczne</strong> - grając ze sobą, są w stanie uzyskać <strong>razem lepsze</strong> wyniki od osób, które wybrały <strong>strategie egoistyczne</strong>.</p>
       <p>Dlaczego nie wspomniałem o tym na początku rozgrywki?</p>
       <p>Ano dlatego, że ta informacja mogłaby mieć wpływ na <strong>Wasze wybory</strong> strategii.</p>
       <p>Został Wam już tylko <strong>Test Thomasa - Kilmanna!</strong></p>

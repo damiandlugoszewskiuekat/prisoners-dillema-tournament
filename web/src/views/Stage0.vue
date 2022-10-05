@@ -5,7 +5,8 @@
     </template>
     <div class="content">
       <p>Dziękuję, że zdecydowałeś/aś się pomóc mi w moim badaniu.</p>
-      <p>Na początku chciałbym przedstawić Ci na czym polega dylemat więźnia.</p>
+      <p>Celem mojej pracy będzie zbadanie korelacji wybieranych strategii z wynikami testu Thomasa Kilmanna.</p>
+      <p>Na początku jednak, chciałbym przedstawić Ci na czym polega dylemat więźnia.</p>
       <p>Następnie zapraszam Cię do wzięcia udziału w turnieju iterowanego dylematu więźnia.</p>
       <p>Po rozegraniu turnieju, czeka na Ciebie jeszcze zestaw 30 pytań, który pozwoli zdefiniować Twoją postawę w sytuacji konfliktowej.</p>
       <p><strong>Spokojnie</strong>, każde pytanie testu ma do wyboru jedną z dwóch odpowiedzi i nie potrzebuje żadnego przygotowania z Twojej strony!</p>
