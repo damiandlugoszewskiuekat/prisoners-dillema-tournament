@@ -152,10 +152,10 @@ const getPercentile = (mode, score) => {
         return 34;
       }
       case (5): {
-        return 49;
+        return 48;
       }
       case (6): {
-        return 59;
+        return 58;
       }
       case (7): {
         return 74;
@@ -164,7 +164,7 @@ const getPercentile = (mode, score) => {
         return 84;
       }
       case (9): {
-        return 89;
+        return 88;
       }
       case (10): {
         return 93;
@@ -195,22 +195,22 @@ const getPercentile = (mode, score) => {
         return 9;
       }
       case (5): {
-        return 19;
+        return 18;
       }
       case (6): {
-        return 29;
+        return 28;
       }
       case (7): {
-        return 49;
+        return 48;
       }
       case (8): {
-        return 59;
+        return 58;
       }
       case (9): {
-        return 79;
+        return 78;
       }
       case (10): {
-        return 89;
+        return 88;
       }
       case (11): {
         return 93;
@@ -235,13 +235,13 @@ const getPercentile = (mode, score) => {
         return 7;
       }
       case (4): {
-        return 19;
+        return 18;
       }
       case (5): {
-        return 29;
+        return 28;
       }
       case (6): {
-        return 39;
+        return 38;
       }
       case (7): {
         return 54;
@@ -287,7 +287,7 @@ const getPercentile = (mode, score) => {
         return 54;
       }
       case (7): {
-        return 69;
+        return 68;
       }
       case (8): {
         return 84;
@@ -321,16 +321,16 @@ const getPercentile = (mode, score) => {
         return 24;
       }
       case (4): {
-        return 39;
+        return 38;
       }
       case (5): {
-        return 59;
+        return 58;
       }
       case (6): {
-        return 79;
+        return 78;
       }
       case (7): {
-        return 89;
+        return 88;
       }
       case (8): {
         return 91;
