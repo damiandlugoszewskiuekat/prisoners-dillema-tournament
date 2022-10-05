@@ -269,23 +269,26 @@ export const prepareDataForExcel = async (room) => {
   const result = await repo_person.getGameByRoom(room);
 
   return result.reduce((acc, element) => {
-    const { id: user_id } = element;
+    const { id: user_id, name } = element;
     const test = JSON.parse(element.test_json || '[]');
     const game = JSON.parse(element.game_json);
     const test_answer = test.length ? getPercentiles(getQualities(calculateTestAnswer(test))) : { none: 0 };
 
     const games_result = game.players[user_id].reduce((accumulator, round, index) => {
       const num = index + 1;
-      accumulator[`sr${num}`] = round.strategy;
-      accumulator[`pr${num}`] = round.points_sum;
-      accumulator[`spr${num}`] = round.enemy_strategy;
-      accumulator[`ppr${num}`] = round.enemy_points_sum;
+      accumulator[`strategia #${num}`] = round.strategy;
+      accumulator[`punkty zdobyte runda #${num}`] = round.points_sum;
+      accumulator[`punkty po rundzie #${num}`] = round.points_global_sum;
+      accumulator[`strategia #${num}`] = round.enemy_strategy;
+      accumulator[`punkty zdobyte runda #${num}`] = round.enemy_points_sum;
+      accumulator[`punkty po rundzie #${num}`] = round.enemy_points_global_sum;
       return accumulator;
     }, {});
 
     acc.push({
       user_id,
-      characteristic: test_answer,
+      name,
+      styl: test_answer,
       ...games_result,
     });
 

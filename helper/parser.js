@@ -115,8 +115,9 @@ const roundTimer = ({ clients, game, room, rooms }) => {
       if (game.finish) {
         game.users.forEach(ids => {
           const user = clients.get(ids)
+          const name = user.data.nick;
           user.ws.send(success('end-game', game))
-          repo_person.addPlayer(ids, room, game)
+          repo_person.addPlayer(ids, room, game, name)
         })
       } else {
         strategyTimer({ clients, game, room, rooms});

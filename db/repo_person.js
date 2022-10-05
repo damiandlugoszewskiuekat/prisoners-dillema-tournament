@@ -1,10 +1,10 @@
 import { query, getOneSql, getAllSql } from './db.js';
 
 export const repo_person = {
-  addPlayer: async (id, room, game) => {
+  addPlayer: async (id, room, game, name) => {
     const game_json = JSON.stringify(game);
-    const sql = 'INSERT INTO person (id, room, game_json) VALUES (?, ?, ?)';
-    return query(sql, [id, room, game_json]);
+    const sql = 'INSERT INTO person (id, room, game_json, name) VALUES (?, ?, ?, ?)';
+    return query(sql, [id, room, game_json, name]);
   },
   setTestResult: async (id, room, test) => {
     const test_json = JSON.stringify(test);
